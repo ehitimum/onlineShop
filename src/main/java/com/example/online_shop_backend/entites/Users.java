@@ -1,16 +1,18 @@
-package com.example.online_shop_backend.entity;
+package com.example.online_shop_backend.entites;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Entity
 @Table
-public class User {
+public class Users {
     @Id
     @SequenceGenerator(
             name = "user_id_sequence",
@@ -22,8 +24,11 @@ public class User {
             generator = "user_id_sequence"
     )
     private long userId;
+    @Column
     private String firstName;
+    @Column
     private String lastName;
+    @Column
     private String emailAddress;
 
 }
