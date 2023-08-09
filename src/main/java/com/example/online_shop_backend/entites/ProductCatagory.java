@@ -3,33 +3,28 @@ package com.example.online_shop_backend.entites;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
 @Entity
 @Table
-public class Users {
+public class ProductCatagory {
     @Id
     @SequenceGenerator(
-            name = "user_id_sequence",
-            sequenceName = "user_id_sequence",
+            name = "productCatagoryId_sequence",
+            sequenceName = "productCatagoryId_sequence",
             allocationSize = 1
     )
     @GeneratedValue(
             strategy = GenerationType.SEQUENCE,
-            generator = "user_id_sequence"
+            generator = "productCatagoryId_sequence"
     )
-    private long userId;
-    @Column
-    private String firstName;
-    @Column
-    private String lastName;
-    @Column
-    private String emailAddress;
+    private long productCatagoryId;
+    private String productCatagoryName;
 
 
 
