@@ -29,8 +29,8 @@ public class ProductService {
 
         Page<Product> productPage = productRepository.findAll(pageRequest);
 
-        System.out.println("Total Pages = " + productPage.getTotalPages());
-        System.out.println("Total Elements = " + productPage.getTotalElements());
+//        System.out.println("Total Pages = " + productPage.getTotalPages());
+//        System.out.println("Total Elements = " + productPage.getTotalElements());
 
         return productPage;
     }
